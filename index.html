@@ -15,6 +15,7 @@
     <div class="adobe-cursor" aria-hidden="true"><span>A</span></div>
     <header class="site-header">
       <a class="monogram" href="#inicio" aria-label="Ir al inicio">SR<span>°</span></a>
+      <div class="page-position" aria-hidden="true"><span id="section-name">INICIO</span><i><b id="scroll-progress"></b></i></div>
       <button class="menu-toggle" aria-expanded="false" aria-controls="menu">MENÚ <span></span></button>
       <nav id="menu" class="site-nav" aria-label="Principal">
         <a href="#proyectos">Proyectos</a><a href="#perfil">Perfil</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a>
@@ -23,10 +24,12 @@
 
     <main>
       <section id="inicio" class="hero">
+        <div class="technical-grid" aria-hidden="true"></div><div class="hero-flare" aria-hidden="true"></div>
         <p class="eyebrow reveal">BASE EN MEDELLÍN, CO <span>—</span> DISPONIBLE PARA PROYECTOS SELECTOS</p>
         <div class="hero-title reveal">
           <p class="hero-kicker">Diseño gráfico <i>+</i> dirección creativa</p>
-          <h1>Imágenes que<br /><em>dejan marca.</em></h1>
+          <h1 data-text="Imágenes que dejan marca.">Imágenes que<br /><em>dejan marca.</em></h1>
+          <p class="hero-role"><span>→</span> <b id="role-rotator">DISEÑADOR GRÁFICO</b></p>
         </div>
         <div class="hero-bottom reveal">
           <p>Construyo universos visuales para artistas, marcas y creadores que tienen algo propio que decir.</p>
@@ -47,7 +50,9 @@
       </section>
 
       <section id="servicios" class="services section-pad">
-        <div class="section-intro reveal"><p class="eyebrow">03 — LO QUE HAGO</p><p>Desde el concepto inicial hasta la última aplicación.</p></div>
+        <p class="eyebrow reveal">03 — LO QUE HAGO</p>
+        <h2 class="services-title reveal">TODO LO QUE<br />TU MARCA <em>NECESITA<br />PARA DESTACAR.</em></h2>
+        <div class="section-intro reveal"><span></span><p>Desde el concepto inicial hasta la última aplicación.</p></div>
         <ol class="service-list">
           <li class="reveal"><span>01</span><h3>Dirección creativa</h3><p>Conceptos, referencias y sistemas visuales que guían una campaña o lanzamiento.</p></li>
           <li class="reveal"><span>02</span><h3>Identidad visual</h3><p>Marcas con personalidad: logo, tipografía, color y reglas que se sostienen.</p></li>
