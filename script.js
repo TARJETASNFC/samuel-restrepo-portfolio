@@ -10,3 +10,8 @@ function openProject(project){content.innerHTML=`<div class="dialog-inner" style
 grid.addEventListener('click',e=>{const card=e.target.closest('.project');if(card)openProject(projects.find(p=>p.id===card.dataset.id))});grid.addEventListener('keydown',e=>{if(e.key==='Enter')e.target.click()});
 document.querySelector('.dialog-close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.site-nav');toggle.onclick=()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)};nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')});
+const cursor=document.querySelector('.adobe-cursor');
+if(matchMedia('(pointer:fine)').matches){
+  window.addEventListener('pointermove',event=>{cursor.style.left=`${event.clientX}px`;cursor.style.top=`${event.clientY}px`;cursor.classList.add('is-visible')});
+  document.querySelectorAll('a,button,.project').forEach(item=>{item.addEventListener('pointerenter',()=>cursor.classList.add('is-active'));item.addEventListener('pointerleave',()=>cursor.classList.remove('is-active'))});
+}
