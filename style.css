@@ -551,3 +551,7 @@ button{ font-family:inherit; cursor:pointer; }
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
 }
+
+/* Full-width audiovisual reel: ten pieces, deliberately edge-to-edge. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.about{padding:0;background:#050505}.about-filmstrip{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));width:100%;height:clamp(310px,44vw,650px);overflow:hidden;background:#050505}.about-filmstrip video,.about-filmstrip img{display:block;width:100%;height:100%;object-fit:cover;min-width:0;filter:saturate(1.06) contrast(1.04);transition:transform .6s var(--ease),filter .45s var(--ease)}.about-filmstrip video:hover,.about-filmstrip img:hover{transform:scale(1.06);filter:saturate(1.25) contrast(1.08);z-index:1}@media(max-width:860px){.about-filmstrip{grid-template-columns:repeat(10,170px);height:380px;overflow-x:auto;scroll-snap-type:x mandatory}.about-filmstrip>*{scroll-snap-align:start}}
