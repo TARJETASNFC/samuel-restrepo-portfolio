@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Samuel Restrepo — dirección creativa, diseño gráfico y motion." />
+    <title>Samuel Restrepo — Dirección Creativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="monogram" href="#inicio" aria-label="Ir al inicio">SR<span>°</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu">MENÚ <span></span></button>
+      <nav id="menu" class="site-nav" aria-label="Principal">
+        <a href="#proyectos">Proyectos</a><a href="#perfil">Perfil</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <p class="eyebrow reveal">BASE EN MEDELLÍN, CO <span>—</span> DISPONIBLE PARA PROYECTOS SELECTOS</p>
+        <div class="hero-title reveal">
+          <p class="hero-kicker">Diseño gráfico <i>+</i> dirección creativa</p>
+          <h1>Imágenes que<br /><em>dejan marca.</em></h1>
+        </div>
+        <div class="hero-bottom reveal">
+          <p>Construyo universos visuales para artistas, marcas y creadores que tienen algo propio que decir.</p>
+          <a class="round-link" href="#proyectos" aria-label="Ver proyectos"><span>Ver<br />proyectos</span><b>↘</b></a>
+        </div>
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+      </section>
+
+      <section id="proyectos" class="projects section-pad">
+        <div class="section-intro reveal"><p class="eyebrow">01 — TRABAJO SELECCIONADO</p><p>Una selección de identidades, campañas y piezas que convierten una idea en una presencia.</p></div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section id="perfil" class="manifesto section-pad">
+        <p class="eyebrow reveal">02 — ENFOQUE</p>
+        <h2 class="reveal">No hago “contenido”.<br />Diseño <em>una atmósfera</em><br />para que una idea se sienta inevitable.</h2>
+        <div class="manifesto-note reveal"><span>SR / 2026</span><p>Mi práctica cruza la cultura musical, el lenguaje digital y la dirección de arte. Cada pieza tiene una intención: detener el scroll, abrir una conversación o quedarse en la memoria.</p></div>
+      </section>
+
+      <section id="servicios" class="services section-pad">
+        <div class="section-intro reveal"><p class="eyebrow">03 — LO QUE HAGO</p><p>Desde el concepto inicial hasta la última aplicación.</p></div>
+        <ol class="service-list">
+          <li class="reveal"><span>01</span><h3>Dirección creativa</h3><p>Conceptos, referencias y sistemas visuales que guían una campaña o lanzamiento.</p></li>
+          <li class="reveal"><span>02</span><h3>Identidad visual</h3><p>Marcas con personalidad: logo, tipografía, color y reglas que se sostienen.</p></li>
+          <li class="reveal"><span>03</span><h3>Arte para música</h3><p>Portadas, universos de lanzamiento y piezas que amplifican un sonido.</p></li>
+          <li class="reveal"><span>04</span><h3>Motion & contenido</h3><p>Movimiento, edición y gráficas pensadas para vivir en pantalla.</p></li>
+        </ol>
+      </section>
+
+      <section id="contacto" class="contact section-pad">
+        <p class="eyebrow reveal">04 — HABLEMOS</p>
+        <h2 class="reveal">¿Tienes una idea<br />que merece <em>presencia?</em></h2>
+        <a class="email reveal" href="mailto:hola@samuelrestrepo.com">hola@samuelrestrepo.com <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer><span>© 2026 SAMUEL RESTREPO</span><span>MEDELLÍN / COLOMBIA</span><a href="#">INSTAGRAM ↗</a></footer>
+
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" aria-label="Cerrar proyecto">×</button>
+      <article id="dialog-content"></article>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
