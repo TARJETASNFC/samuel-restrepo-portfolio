@@ -186,6 +186,26 @@ const IMG_BASE = 'assets/portfolio/';
 })();
 
 /* ============================================================
+   HERO PROJECT PREVIEW
+   ============================================================ */
+(function heroPreview(){
+  const preview = document.getElementById('heroPreview');
+  const previewImg = document.getElementById('heroPreviewImg');
+  const close = document.getElementById('heroPreviewClose');
+  const cards = document.querySelectorAll('.hero-stack-card');
+  if(!preview || !previewImg || !close) return;
+  function closePreview(){ preview.classList.remove('is-open'); preview.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  cards.forEach(card=> card.addEventListener('click', ()=>{
+    const image = card.querySelector('img');
+    previewImg.src = image.src; previewImg.alt = image.alt;
+    preview.classList.add('is-open'); preview.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+  }));
+  close.addEventListener('click', closePreview);
+  preview.addEventListener('click', event=>{ if(event.target === preview) closePreview(); });
+  document.addEventListener('keydown', event=>{ if(event.key==='Escape') closePreview(); });
+})();
+
+/* ============================================================
    REVEAL ON SCROLL
    ============================================================ */
 (function reveal(){
